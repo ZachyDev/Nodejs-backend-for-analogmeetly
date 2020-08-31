@@ -14,7 +14,7 @@ app.get('/meetly',(req,res,next) => {
             "department": "finance",
             "attendees": "20",
             "users": "analog",
-            "company": "analogteamss"
+            "company": "analogteams"
         }]
     })
 });
