@@ -1,0 +1,14 @@
+{
+  "name": "analogmeetly",
+  "version": "1.0.0",
+  "description": "this serves as an api for storing analog meetings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
