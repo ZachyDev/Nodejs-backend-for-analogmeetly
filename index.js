@@ -15,7 +15,6 @@ document.addEventListener('submit',(event) => {
                 res.setHeader("Access-Control-Max-Age", "1800");
                 res.setHeader("Access-Control-Allow-Headers", "content-type");
                 res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
-                res.send('./index.html');
             res.json({
                 "meeting_details": [{
                     "date": date,
