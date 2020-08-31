@@ -7,7 +7,8 @@ app.get('/meetly',(req,res,next) => {
             "date": "10/02/2020",
             "type": "AGM",
             "department": "finance",
-            "attendees": "20"
+            "attendees": "20",
+            "users": "analog"
         }]
     })
 });
