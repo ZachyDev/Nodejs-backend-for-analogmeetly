@@ -9,10 +9,10 @@
     res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
     res.json({
          "meeting_details": [{
-             "date": date,
-             "type":type,
-             "department": dept,
-             "attendees": attendees,
+             "date": "31/08/2020",
+             "type":"Weekly",
+             "department": "Devops",
+             "attendees": 20,
          }]
      })
  });
