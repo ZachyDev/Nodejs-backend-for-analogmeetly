@@ -1,18 +1,3 @@
-// document.addEventListener('submit',(event) => {
-//     event.preventDefault();
-//     // call getInputs
-//     let type = getInputs('type');
-//     let date = getInputs('date');
-//     let dept = getInputs('dept');
-//     let attendees = getInputs('attendees');
-// });
-
-// // getInputs
-// const getInputs = (id) => {
-//     return document.getElementById(id).value;
-// }
-
- // *************************node**********************
  let express = require('express');
  let port = process.env.PORT || 1234;
  let app = express();
@@ -35,4 +20,4 @@
      console.log('its live on heroku!');
  })
 
-//  ************************end***********************
+
