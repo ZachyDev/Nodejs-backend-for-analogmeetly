@@ -18,20 +18,7 @@ let port = 3000;
             "type": "weekly",
             "department": "Frontend",
             "attendees": "10",
-        },
-        {
-            "date": "03/01/2020",
-            "type": "monthly",
-            "department": "Backend",
-            "attendees": "11",
-          },
-          {
-           "date": "04/01/2020",
-           "type": "monthly",
-           "department": "finance",
-           "attendees": "5",
-         }
-    ]
+        }]
      })
  });
  app.listen(port,() => {
