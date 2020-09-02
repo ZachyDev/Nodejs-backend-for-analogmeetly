@@ -1,6 +1,7 @@
 let express = require('express');
 let port = 3000
 let app = express();
+let app2 = express();
 let meetings = require('./store');
 // all meetings
 app.get(`/meetings`, (request, response) => {
@@ -17,7 +18,7 @@ app.get(`/meetings/:type`, (request, response) => {
     }
   });
 // meeting by department
-app.get(`/meetings/:department`, (request, response) => {
+app2.get(`/meetings/:department`, (request, response) => {
     const dept = String(request.params.department);
     const getDept = meetings.find((meeting) => meeting.department === dept);
   

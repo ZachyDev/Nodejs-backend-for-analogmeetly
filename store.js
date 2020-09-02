@@ -1,5 +1,4 @@
-let meetings = [
-    {
+let meetings = [{
         "date": "01/01/2020",
         "type": "AGM",
         "department": "devops",
@@ -22,6 +21,5 @@ let meetings = [
          "type": "monthly",
          "department": "finance",
          "attendees": "5",
-    }
-];
+    }];
 module.exports = meetings;
