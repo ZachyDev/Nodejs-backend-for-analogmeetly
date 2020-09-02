@@ -1,5 +1,6 @@
  let express = require('express');
- let port = process.env.PORT || 1234;
+//  let port = process.env.PORT || 1234;
+let port = 3000
  let app = express();
  app.get('/meetly',(req,res,next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -30,12 +31,12 @@
              "type": "monthly",
              "department": "finance",
              "attendees": "5",
-           }
-        ]
-    })
+           }]
+
+     })
  });
  app.listen(port,() => {
-     console.log('its live on heroku!')
+     console.log('its live on heroku!');
  })
 
 

@@ -4,7 +4,7 @@
   "description": "this serves as an api for storing analog meetings",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
