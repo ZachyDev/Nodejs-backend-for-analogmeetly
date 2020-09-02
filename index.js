@@ -7,22 +7,37 @@
     res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
     res.json({
          "meeting_details": [{
-             "date": "31/08/2020",
+             "date": "01/01/2020",
              "type":"Weekly",
              "department": "Devops",
-             "attendees": 22
+             "attendees": 6
          },
          {
-            "date": "31/08/2020",
-            "type":"Weekly",
-            "department": "Devops",
-            "attendees": 22
+            "date": "02/01/2020",
+            "type":"AGM",
+            "department": "management",
+            "attendees": 8
         },
         {
-            "date": "31/08/2020",
+            "date": "03/01/2020",
             "type":"Weekly",
-            "department": "Devops",
+            "department": "frontend",
             "attendees": 22
+        },{
+            "date": "04/01/2020",
+            "type":"Weekly",
+            "department": "backend",
+            "attendees": 11
+        },{
+            "date": "05/01/2020",
+            "type":"monthly",
+            "department": "design",
+            "attendees": 10
+        },{
+            "date": "06/01/2020",
+            "type":"Weekly",
+            "department": "finance",
+            "attendees":5
         }]
      })
  });
