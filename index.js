@@ -44,7 +44,7 @@ app.get(`/meetings/:department`, (request, response,next) => {
     next()
   })
 // meeting type
-app.get(`/meetings/department/:type`, (request, response,next) => {
+app.get(`/meetings/:type`, (request, response,next) => {
   const type = String(request.params.type);
   const getType = meetings.find((meeting) => meeting.type === type);
 
