@@ -6,7 +6,7 @@
     res.setHeader("Access-Control-Allow-Headers", "content-type");
     res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
     res.json({
-        "users": [
+        "meetings": [
             {
               "date": "01/01/2020",
               "type": "AGM",
