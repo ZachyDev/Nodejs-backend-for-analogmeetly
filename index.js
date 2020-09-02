@@ -35,7 +35,7 @@
     })
  });
  app.listen(port,() => {
-     console.log('its live on heroku!');
+     console.log('its live on heroku!')
  })
 
 
