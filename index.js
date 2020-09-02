@@ -17,7 +17,7 @@ let port = 3000;
             "date": "02/01/2020",
             "type": "weekly",
             "department": "Frontend",
-            "attendees": "10",
+            "attendees": "10"
         }]
      })
  });
