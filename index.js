@@ -11,7 +11,13 @@
              "type":"Weekly",
              "department": "Devops",
              "attendees": 22
-         }]
+         },
+         {
+            "date": "31/08/2020",
+            "type":"Weekly",
+            "department": "Devops",
+            "attendees": 22
+        }]
      })
  });
  app.listen(port,() => {
