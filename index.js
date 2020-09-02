@@ -1,57 +1,59 @@
- let express = require('express');
- let port = process.env.PORT || 1234;
- let app = express();
- let meetings = [
-     {
-        "date": "01/01/2020",
-        "type":"Weekly",
-        "department": "Devops",
-        "attendees": 6
-    },
-    {
-       "date": "02/01/2020",
-       "type":"AGM",
-       "department": "management",
-       "attendees": 8
-   },
-   {
-       "date": "03/01/2020",
-       "type":"Weekly",
-       "department": "frontend",
-       "attendees": 22
-   },{
-       "date": "04/01/2020",
-       "type":"Weekly",
-       "department": "backend",
-       "attendees": 11
-   },{
-       "date": "05/01/2020",
-       "type":"monthly",
-       "department": "design",
-       "attendees": 10
-   },{
-       "date": "06/01/2020",
-       "type":"Weekly",
-       "department": "finance",
-       "attendees":5
-   }];
+let express = require('express');
+let port = 3000
+let app = express();
+let meetings = [
+        {
+            "date": "01/01/2020",
+            "type": "AGM",
+            "department": "devops",
+            "attendees": "20",
+        },
+        {
+            "date": "02/01/2020",
+            "type": "weekly",
+            "department": "frontend",
+            "attendees": "10",
+        },
+        {
+            "date": "03/01/2020",
+            "type": "monthly",
+            "department": "backend",
+            "attendees": "11",
+        },
+        {
+            "date": "04/01/2020",
+             "type": "monthly",
+             "department": "finance",
+             "attendees": "5",
+        }
+];
+// all meetings
+app.get(`/meetings`, (request, response) => {
+  response.json(meetings);
+});
+// meeting by department
+app.get(`/meetings/:department`, (request, response,next) => {
+    const dept = String(request.params.department);
+    const getDept = meetings.find((meeting) => meeting.department === dept);
+  
+    if (!getDept) {
+      response.status(500).send('Meeting not found.')
+    } else {
+      response.json(getDept);
+    }
+    next()
+  })
+// meeting type
+app.get(`/meetings/department/:type`, (request, response,next) => {
+  const type = String(request.params.type);
+  const getType = meetings.find((meeting) => meeting.type === type);
 
- app.get('/meetly', (req, res,next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
-    response.json(meetings);
-  });
- app.get('/meetly/:weekly',(req,res,next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Headers", "content-type");
-    res.setHeader("Access-Control-Allow-Methods","PUT, POST, GET, DELETE, PATCH, OPTIONS");
-    const date = Number(request.params.date);
-    const getDate = accounts.find((meeting) => meeting.date === date);
-    res.json(getDate);
- });
- app.listen(port,() => {
-     console.log('its live on heroku!');
- })
-
-
+  if (!getType) {
+    response.status(500).send('Meeting not found.')
+  } else {
+    response.json(getType);
+  }
+});
+app.listen(port,() => {
+    console.log('live on heroku')
+})
